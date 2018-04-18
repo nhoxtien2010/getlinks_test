@@ -1,13 +1,15 @@
 ActiveAdmin.register AdminUser do
-  permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :is_admin
 
   index do
     selectable_column
     id_column
     column :email
+    column :authentication_token
     column :current_sign_in_at
     column :sign_in_count
     column :created_at
+    column :is_admin
     actions
   end
 
@@ -21,6 +23,7 @@ ActiveAdmin.register AdminUser do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :is_admin
     end
     f.actions
   end
