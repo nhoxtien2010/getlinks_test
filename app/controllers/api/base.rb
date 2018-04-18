@@ -4,7 +4,7 @@ class Api::Base < ApplicationController
   DATA = "data".freeze
 
   def authenticate
-    if current_login.blank?
+    if current_user.blank?
       response = {}
       response[STATUS] = :error
       response[MESSAGE] = I18n.t("api.authentication_required")
@@ -15,9 +15,11 @@ class Api::Base < ApplicationController
     end
   end
 
-  def current_login
+  def current_user
     if (api_token = token_param).present?
       @current_user ||= AdminUser.where(authentication_token: api_token).first
+      sign_in @current_user
+      @current_user
     end
   end
 
