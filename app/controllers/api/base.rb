@@ -11,7 +11,7 @@ class Api::Base < ApplicationController
       response[DATA] = nil
       render json: response, status: :unauthorized
     else
-      render json: {email: @current_user.email, authentication_token: }
+      render json: {email: @current_user.email, authentication_token: @current_user.authentication_token}
     end
   end
 
