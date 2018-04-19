@@ -6,8 +6,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resource :users, only: %i[create]
+      resources :users, only: %i[create]
       post 'users/login'
+
+      resources :order_details, only: %i[index create update destroy]
+      resources :orders, only: %i[index create update destroy]
+      resources :products, only: %i[index create update destroy]
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

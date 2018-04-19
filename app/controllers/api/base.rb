@@ -11,14 +11,13 @@ class Api::Base < ApplicationController
       response[DATA] = nil
       render json: response, status: :unauthorized
     else
-      render json: {email: @current_user.email, authentication_token: @current_user.authentication_token}
+    #   continue
     end
   end
 
   def current_user
     if (api_token = token_param).present?
-      @current_user ||= AdminUser.where(authentication_token: api_token).first
-      sign_in @current_user
+      @current_user ||= User.where(authentication_token: api_token).first
       @current_user
     end
   end
