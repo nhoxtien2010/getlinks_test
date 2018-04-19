@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  active_admin_config = ActiveAdmin::Devise.config
+  active_admin_config[:controllers][:sessions] = 'sessions'
+
+  devise_for :admin_users, active_admin_config
   ActiveAdmin.routes(self)
+
+  root 'admin/dashboard#index'
 
 
   namespace :api do
