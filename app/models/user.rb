@@ -4,4 +4,8 @@ class User < ApplicationRecord
   acts_as_token_authenticatable
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
+
+  def admin?
+    is_admin
+  end
 end
