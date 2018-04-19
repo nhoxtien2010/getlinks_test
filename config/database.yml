@@ -7,12 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: getlinks_test_development
+  database: getlinks_development
 
 test:
   <<: *default
-  database: getlinks_test_test
+  database: getlinks_test
 
 production:
   <<: *default
-  database: getlinks_test_production
+  database: getlinks_production

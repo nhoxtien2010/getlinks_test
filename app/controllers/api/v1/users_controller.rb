@@ -1,15 +1,15 @@
-class Api::V1::AdminUsersController < Api::Base
+class Api::V1::UsersController < Api::Base
   before_action :authenticate, except: %i[create login]
 
   def create
-    user = AdminUser.create!(user_params)
+    user = User.create!(user_params)
     render json: user
 
   end
 
 
   def login
-    user = AdminUser.find_by_email(user_params[:email])
+    user = User.find_by_email(user_params[:email])
 
     if user && user.validate(user_params[:password])
       render json: {success: true, token: user.authentication_token}
