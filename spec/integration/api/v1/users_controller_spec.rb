@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'byebug'
+require 'faker'
 require Rails.root.join('spec', 'helpers', 'sessions_helper_spec')
 RSpec.configure do |c|
   c.include SessionsHelper
@@ -8,7 +8,7 @@ end
 RSpec.describe 'Api::V1::UsersController', type: :request do
 
   before(:each) {
-    @created_user = create(:user)
+    @admin_user = create(:user)
     @user = {
         email: 'aa@example.com',
         password: 'aa@example.com',
@@ -55,7 +55,7 @@ RSpec.describe 'Api::V1::UsersController', type: :request do
     describe 'update' do
       it "should success" do
 
-        put( api_v1_user_path(id: @created_user.id),
+        put( api_v1_user_path(id: @admin_user.id),
               headers: { 'HTTP_API_TOKEN' => get_access_token },
               params: {
                   user: @user
