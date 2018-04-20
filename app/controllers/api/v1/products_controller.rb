@@ -13,7 +13,7 @@ class Api::V1::ProductsController < Api::Base
 
 
   def update
-    p = Product.find_by_id(params[:id])
+    p = Product.find(params[:id])
     unless p
       render json: {success: false, error: 'Invalid product'}, status: :bad_request
       return
@@ -24,7 +24,7 @@ class Api::V1::ProductsController < Api::Base
   end
 
   def destroy
-    p = Product.find_by_id(params[:id])
+    p = Product.find(params[:id])
     unless p.order_details.blank?
       render json: {success: false, error: 'Product is reference by order'}, status: :bad_request
       return

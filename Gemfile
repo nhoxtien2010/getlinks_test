@@ -39,6 +39,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
 end
 
 group :development do
@@ -57,4 +58,8 @@ gem 'devise'
 gem 'activeadmin'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+
+
 

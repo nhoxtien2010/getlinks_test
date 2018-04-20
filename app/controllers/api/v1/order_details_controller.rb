@@ -3,7 +3,7 @@ class Api::V1::OrderDetailsController < Api::Base
 
   def index
     order_id = params[:order_id]
-    order = Order.find_by_id(order_id)
+    order = Order.find(order_id)
     unless order
       render json: {success: false, error: 'Invalid Order'}, status: :bad_request
       return
@@ -19,7 +19,7 @@ class Api::V1::OrderDetailsController < Api::Base
 
 
   def update
-    o = OrderDetail.find_by_id(params[:id])
+    o = OrderDetail.find(params[:id])
     unless o
       render json: {success: false, error: 'Invalid order detail'}, status: :bad_request
       return
@@ -30,7 +30,7 @@ class Api::V1::OrderDetailsController < Api::Base
   end
 
   def destroy
-    o = OrderDetail.find_by_id(params[:id])
+    o = OrderDetail.find(params[:id])
     unless o
       render json: {success: false, error: 'Invalid order detail'}, status: :bad_request
       return

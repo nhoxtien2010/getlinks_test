@@ -13,7 +13,7 @@ class Api::V1::OrdersController < Api::Base
 
 
   def update
-    o = Order.find_by_id(params[:id])
+    o = Order.find(params[:id])
     unless o
       render json: {success: false, error: 'Invalid Order'}, status: :bad_request
       return
@@ -24,7 +24,7 @@ class Api::V1::OrdersController < Api::Base
   end
 
   def destroy
-    o = Order.find_by_id(params[:id])
+    o = Order.find(params[:id])
     unless o
       render json: {success: false, error: 'Invalid Order'}, status: :bad_request
       return
