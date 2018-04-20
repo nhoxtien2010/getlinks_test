@@ -10,13 +10,11 @@ class Api::V1::UsersController < Api::Base
 
   def login
     user = User.find_by_email(user_params[:email])
-
     if user && user.validate(user_params[:password])
       render json: {success: true, token: user.authentication_token}
     else
       render json: {success: false, error: 'Wrong user email or password'}
     end
-
   end
 
   private

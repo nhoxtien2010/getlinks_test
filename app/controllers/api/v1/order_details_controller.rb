@@ -31,6 +31,10 @@ class Api::V1::OrderDetailsController < Api::Base
 
   def destroy
     o = OrderDetail.find_by_id(params[:id])
+    unless o
+      render json: {success: false, error: 'Invalid order detail'}, status: :bad_request
+      return
+    end
     o.delete
     render json: {success: true, order_detail: o}
 
