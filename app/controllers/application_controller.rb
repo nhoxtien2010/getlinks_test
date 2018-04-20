@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :role_authenticate
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  rescue_from ActiveRecord::RecordInvalid, :with => :record_invalid
 
   # SUPER_CONTROLLERS = %w[admin/users admin/products api/v1/products].freeze
 
@@ -45,5 +46,9 @@ class ApplicationController < ActionController::Base
 
   def record_not_found
     render json: {success: false, error: 'Cannot find record'}, status: :bad_request
+  end
+
+  def record_invalid
+    render json: {success: false, error: 'Bad params'}, status: :bad_request
   end
 end

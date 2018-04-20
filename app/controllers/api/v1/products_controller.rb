@@ -14,10 +14,6 @@ class Api::V1::ProductsController < Api::Base
 
   def update
     p = Product.find(params[:id])
-    unless p
-      render json: {success: false, error: 'Invalid product'}, status: :bad_request
-      return
-    end
     p.update!(product_params)
     render json: {success: true, product: p}
 
@@ -25,10 +21,6 @@ class Api::V1::ProductsController < Api::Base
 
   def destroy
     p = Product.find(params[:id])
-    unless p.order_details.blank?
-      render json: {success: false, error: 'Product is reference by order'}, status: :bad_request
-      return
-    end
     p.delete
     render json: {success: true, product: p}
 

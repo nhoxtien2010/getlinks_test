@@ -4,8 +4,6 @@ class Api::V1::UsersController < Api::Base
   def create
     user = User.create!(user_params)
     render json: user
-  rescue => ex
-    render json: { success: false, errors: "Bad params"}, status: :bad_request
   end
 
   def update
