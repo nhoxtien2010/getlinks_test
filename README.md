@@ -18,9 +18,9 @@ This is a simple app describe manage product
 ## The web UI
 
 
-![alt text](Screen Shot 2018-04-20 at 9.45.03 PM.png)
-![alt text](Screen Shot 2018-04-20 at 9.46.50 PM.png)
-![alt text](Screen Shot 2018-04-20 at 9.47.30 PM.png)
+![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipMnCQNw3yYAGAjc3iOZd1vxBLxrViowv6p4Kyi0?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
+![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipOUkVi0RU99v6Cy7sKui27PZQyOYUntL0zVPyB3?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
+![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipPn5s16XHyFLzFfG3RNIqN1b-1sbSgALMj0-53q?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
 
 
 I use active admin to quickly create simple UI for Admin and User. If Admin: can edit all items, 
@@ -53,7 +53,7 @@ To easy test I create a collection by postman, You can install and import by lin
 https://www.getpostman.com/collections/a11e592beebad69c1111
 
 
-![alt text](Screen Shot 2018-04-20 at 9.47.30 PM.png)
+![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipOgBeqktB3YUgKA78r4ZPQjYY1I3ffZny8G0_Cx?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
 
 But if you want to test, remember set environment of postman first. You can import the sample environment from file 'getlinks_test_environment.postman_environment.json'
 (locate on project folder)
