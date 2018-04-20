@@ -54,7 +54,7 @@ To easy test I create a collection by postman, You can install and import by lin
 https://www.getpostman.com/collections/a11e592beebad69c1111
 
 
-![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipOgBeqktB3YUgKA78r4ZPQjYY1I3ffZny8G0_Cx?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
+![alt text](./Screen%20Shot%202018-04-20%20at%2010.16.39%20PM.png?raw=true)
 
 But if you want to test, remember set environment of postman first. You can import the sample environment from file 'getlinks_test_environment.postman_environment.json'
 (locate on project folder)
