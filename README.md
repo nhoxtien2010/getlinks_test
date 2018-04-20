@@ -17,11 +17,9 @@ This is a simple app describe manage product
 
 ## The web UI
 
-![Alt text](./Screen\Shot\2018-04-20\at\9.45.03\PM.png?raw=true "Title")
-
-![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipMnCQNw3yYAGAjc3iOZd1vxBLxrViowv6p4Kyi0?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
-![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipOUkVi0RU99v6Cy7sKui27PZQyOYUntL0zVPyB3?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
-![alt text](https://photos.google.com/u/2/share/AF1QipO6DfBK0ckVMXZ9WWik7qQs_ePKQn8lFelD-hc9LtlcGl-Q4IzkaxTdblrJsfQeaA/photo/AF1QipPn5s16XHyFLzFfG3RNIqN1b-1sbSgALMj0-53q?key=YTVOZTBfRnJOYlVITFp0QzJnYlVLdGg5SnN3RnJn)
+![alt text](./Screen%20Shot%202018-04-20%20at%209.45.03%20PM.png?raw=true)
+![Alt text](./Screen%20Shot%202018-04-20%20at%209.47.30%20PM.png?raw=true)
+![alt text](./Screen%20Shot%202018-04-20%20at%209.46.50%20PM.png?raw=true)
 
 
 I use active admin to quickly create simple UI for Admin and User. If Admin: can edit all items, 
