@@ -19,10 +19,9 @@ class ApplicationController < ActionController::Base
   def admin_action
     controller = params['controller'].to_s
     action = params['action'].to_s
-
-    (controller.include?('users') || controller.include?('products') &&
+    ((controller.include?('users') || controller.include?('products'))&&
     !%w[index login].include?(action)) &&
-    !(controller == "api/v1/users" && action == 'login')
+    !(controller == "api/v1/users" && action == 'create')
   end
 
 

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20180419142306) do
   create_table "order_details", force: :cascade do |t|
     t.bigint "product_id"
     t.bigint "order_id"
-    t.integer "amount"
+    t.integer "amount", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_details_on_order_id"
