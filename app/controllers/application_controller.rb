@@ -1,12 +1,22 @@
 class ApplicationController < ActionController::Base
   before_action :role_authenticate
-  SUPER_CONTROLLERS = %w[admin/users admin/products].freeze
+  # SUPER_CONTROLLERS = %w[admin/users admin/products api/v1/products].freeze
 
   def role_authenticate
-    if SUPER_CONTROLLERS.include?(params['controller']) && !current_user.admin?
-      redirect_to new_user_session_path
+    if admin_action &&  !current_user.admin?
+      if params['controller'].include? 'admin'
+        redirect_to new_user_session_path
+      else
+        render json: {success: false, error: 'You do not have role to do this action'}, status: :unauthorized
+      end
     end
   end
+
+
+  def admin_action
+    controller = params['controller'].to_s
+    (controller.include?('users') || controller.include?('products')) && params['action'] != 'index'
+    end
 
 
   def order

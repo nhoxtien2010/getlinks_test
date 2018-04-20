@@ -1,4 +1,4 @@
-class Api::V1::OrdersController < Api::Base
+class Api::V1::OrderDetailsController < Api::Base
   before_action :authenticate
 
   def index
@@ -13,7 +13,7 @@ class Api::V1::OrdersController < Api::Base
 
 
   def create
-    o = OrderDetail.create! order_detail_params)
+    o = OrderDetail.create! order_detail_params
     render json: {success: true, order_detail: o}
   end
 
@@ -39,9 +39,10 @@ class Api::V1::OrdersController < Api::Base
   private
 
   def order_detail_params
-    params.require(:order).permit(
+    params.require(:order_detail).permit(
       :order_id,
-      :product_id
+      :product_id,
+      :amount
     )
   end
 end

@@ -25,6 +25,10 @@ class Api::V1::OrdersController < Api::Base
 
   def destroy
     o = Order.find_by_id(params[:id])
+    unless o
+      render json: {success: false, error: 'Invalid Order'}, status: :bad_request
+      return
+    end
     o.delete
     render json: {success: true, order: o}
 
